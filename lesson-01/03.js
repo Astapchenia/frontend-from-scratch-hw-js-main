@@ -9,10 +9,10 @@ let sum = 0;
 let i = 1;
 
 while (i <= 20) {
-  if (i % 2 === 0) {
+  if (i % 2 !== 0) {
     sum += i;
-  } else {
+  } 
     i++;
   }
   console.log(sum);
-}
+
