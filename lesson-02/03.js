@@ -4,18 +4,21 @@
  * Результат сохраните в переменной grade.
  */
 
-const score = 70 // тестовое значение, можно изменять
+const score = Math.floor(Math.random() * 99) + 1; // тестовое значение, можно изменять
 let grade
 
 if (score >= 0 && score <= 49) {
     grade = 'F';
-} else (score >= 50 && score <= 69) {
-    grade = 'D';
-} if (score >= 70 && score <= 79) {
+} else if (score >= 50 && score <= 69) {
+    grade = 'D'; 
+} else if (score >= 70 && score <= 79) {
     grade = 'C';
-} else (score >= 80 && score <= 89) {
+} else if (score >= 80 && score <= 89) {
     grade = 'B';
-} if (score >= 90 && score <= 100) {
+} else {
     grade = 'A';
 }
+
+console.log('Оценка', grade);
+console.log('Балл', score);
 // your code
