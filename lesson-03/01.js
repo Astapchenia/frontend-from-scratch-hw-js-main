@@ -5,5 +5,5 @@ function calculateAverage(a, b) {
     return average;
 }
 
-const result = calculateAverage(10, 20);
+// const result = calculateAverage(10, 20);
 
