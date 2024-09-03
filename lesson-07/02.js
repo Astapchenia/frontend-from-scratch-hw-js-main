@@ -4,7 +4,9 @@
  */
 
 function isNumeric(str) {
-    return !isNaN(str.trim()) && str.trim() !== '';
+    str = str.trim();
+  // Проверяем, является ли строка пустой или не числом
+    return str !== '' && !isNaN(str) && isFinite(str);
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
