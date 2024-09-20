@@ -29,6 +29,12 @@ const model = {
     this.movies.push(newMovie)
     view.renderMovies(this.movies)
   },
+  deleteMovie(movieId) {
+    this.movies = this.movies.filter((movie) => movie.id !== movieId)
+
+    view.renderMovies(model.movies)
+  }
+  
   // your code
 }
 
@@ -50,6 +56,7 @@ const view = {
       inputDescription.value = ''
     })
 
+    
     // your code
   },
   renderMovies(movies) {
@@ -90,6 +97,10 @@ const controller = {
       view.displayMessage('Заполните все поля!', true)
     }
   },
+  deleteMovie(movieId) {
+    model.deleteMovie(movieId)
+  }
+  
   // your code
 }
 
